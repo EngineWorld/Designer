@@ -66,23 +66,23 @@ struct FRandomMinMaxFloat
 
 	/** The minimal value */
 	UPROPERTY(Category = "Random", EditAnywhere)
-	float Min;
+	float Min = 0.0f;
 
 	/** The maximum value */
 	UPROPERTY(Category = "Random", EditAnywhere)
-	float Max;
+	float Max = 0.0f;
 
 	/**
 	 * Is this value allowed to randomly flip the sign of the generated value?
 	 * i.e. if Min = 30 and Max = 30 the outcome can be either 30 or -30 when this is set to true
 	 */
 	UPROPERTY(Category = "Random", EditAnywhere)
-	bool bRandomlyNegateValue;
+	bool bRandomlyNegateValue = false;
 
 private:
 	/** The randomly generated value */
 	UPROPERTY()
-	float RandomValue;
+	float RandomValue = 0.0f;
 
 public:
 	FRandomMinMaxFloat()
